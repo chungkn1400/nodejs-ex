@@ -78,7 +78,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pagecount', function (req, res) {
-    res.send('{ pageCount: -1 }');
+    res.send('{ pageCount: 99 }');
 });
 
 app.get('/pagecount_old', function (req, res) {
