@@ -73,9 +73,10 @@ app.get('/', function (req, res) {
       res.render('index.html', { pageCountMessage : count, dbInfo: dbDetails });
     });
   } else {
-    res.render('index.html', { pageCountMessage : 'mycount'});
+    res.render('index.html', { pageCountMessage : 99});
   }
 });
+
 app.get('/old', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
