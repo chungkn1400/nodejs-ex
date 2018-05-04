@@ -78,9 +78,9 @@ app.get('/', function (req, res) {
 });
 
 
-if(!myvar){global.myvar=0;};
-myvar+=1;
-var mymsg='mymsg'+0+' '+myvar+' '
+if(!global.myvar){global.myvar=0;};
+global.myvar=global.myvar+1;
+var mymsg='mymsg'+0+' '+myvar+' ';
 
 app.get('/mymsg', function (req, res) {
     res.send(mymsg);
