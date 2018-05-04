@@ -33,8 +33,7 @@ if (mongoURL == null && process.env.DATABASE_SERVICE_NAME) {
   }
 }
 var db = null,
-    dbDetails = new Object(),
-	myobject = new Object();
+    dbDetails = new Object();
 
 var initDb = function(callback) {
   if (mongoURL == null) return;
@@ -78,13 +77,12 @@ app.get('/', function (req, res) {
   }
 });
 
+global.mymsg='mymsg'+0+' '+11.1+' '
+
 app.get('/mymsg', function (req, res) {
-    res.send('test');
+    res.send(mymsg);
 });
 
-app.get('/pagecountnew', function (req, res) {
-    res.send('{ pageCount: 99 }');
-});
 
 app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
