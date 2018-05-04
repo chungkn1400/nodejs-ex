@@ -78,13 +78,6 @@ app.get('/', function (req, res) {
 });
 
 app.get('/pagecount', function (req, res) {
-  if (!myvar) {
-    global.myvar="0";
-  }
-  res.send("99");
-});
-
-app.get('/pagecount_old', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
