@@ -77,7 +77,10 @@ app.get('/', function (req, res) {
   }
 });
 
-global.mymsg='mymsg'+0+' '+11.1+' '
+
+if(!myvar){global.myvar=0;};
+myvar+=1;
+var mymsg='mymsg'+0+' '+myvar+' '
 
 app.get('/mymsg', function (req, res) {
     res.send(mymsg);
