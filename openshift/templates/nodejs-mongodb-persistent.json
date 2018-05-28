@@ -237,7 +237,7 @@
                 ],
                 "readinessProbe": {
                   "timeoutSeconds": 3,
-                  "initialDelaySeconds": 3,
+                  "initialDelaySeconds": 60,
                   "httpGet": {
                     "path": "/",
                     "port": 8080
@@ -245,7 +245,7 @@
                 },
                 "livenessProbe": {
                   "timeoutSeconds": 3,
-                  "initialDelaySeconds": 30,
+                  "initialDelaySeconds": 60,
                   "httpGet": {
                     "path": "/",
                     "port": 8080
@@ -390,7 +390,7 @@
                 ],
                 "readinessProbe": {
                   "timeoutSeconds": 1,
-                  "initialDelaySeconds": 3,
+                  "initialDelaySeconds": 60,
                   "exec": {
                     "command": [
                       "/bin/sh",
@@ -402,7 +402,7 @@
                 },
                 "livenessProbe": {
                   "timeoutSeconds": 1,
-                  "initialDelaySeconds": 30,
+                  "initialDelaySeconds": 60,
                   "tcpSocket": {
                     "port": 27017
                   }
