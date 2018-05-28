@@ -34,13 +34,13 @@ spec:
         - containerPort: 8080
         readinessProbe:
           timeoutSeconds: 3
-          initialDelaySeconds: 3
+          initialDelaySeconds: 60
           httpGet:
             path: "/"
             port: 8080
         livenessProbe:
           timeoutSeconds: 3
-          initialDelaySeconds: 30
+          initialDelaySeconds: 60
           httpGet:
             path: "/"
             port: 8080
