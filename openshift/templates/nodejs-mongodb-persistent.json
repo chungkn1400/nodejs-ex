@@ -236,7 +236,7 @@
                   }
                 ],
                 "readinessProbe": {
-                  "timeoutSeconds": 3,
+                  "timeoutSeconds": 60,
                   "initialDelaySeconds": 60,
                   "httpGet": {
                     "path": "/",
@@ -244,7 +244,7 @@
                   }
                 },
                 "livenessProbe": {
-                  "timeoutSeconds": 3,
+                  "timeoutSeconds": 60,
                   "initialDelaySeconds": 60,
                   "httpGet": {
                     "path": "/",
@@ -389,7 +389,7 @@
                   }
                 ],
                 "readinessProbe": {
-                  "timeoutSeconds": 1,
+                  "timeoutSeconds": 60,
                   "initialDelaySeconds": 60,
                   "exec": {
                     "command": [
@@ -401,7 +401,7 @@
                   }
                 },
                 "livenessProbe": {
-                  "timeoutSeconds": 1,
+                  "timeoutSeconds": 60,
                   "initialDelaySeconds": 60,
                   "tcpSocket": {
                     "port": 27017
