@@ -60,7 +60,7 @@ app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
-    initDb(function(err){});
+    //$$ initDb(function(err){});
   }
   if (db) {
     var col = db.collection('counts');
@@ -78,8 +78,7 @@ app.get('/', function (req, res) {
 });
 
 
-if(!global.myvar){global.myvar=0;};
-global.myvar=global.myvar+1;
+var myvar=99;
 var mymsg='mymsg'+0+' '+myvar+' ';
 
 app.get('/mymsg', function (req, res) {
@@ -91,7 +90,7 @@ app.get('/pagecount', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
   if (!db) {
-    initDb(function(err){});
+   //$$ initDb(function(err){});
   }
   if (db) {
     db.collection('counts').count(function(err, count ){
